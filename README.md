@@ -38,3 +38,7 @@ display_rotate=3
 display_rotate=2  
 *Rotate 270° Clockwise  
 display_rotate=1  
+----------------------------------------------------------------------------------------  
+更新过程中如遇到掉电可能会出现unable to acquire the dpkg frontend lock提示，可暴力杀死此进程。  
+sudo rm /var/cache/apt/archives/lock-frontend  
+sudo rm /var/lib/dpkg/lock-frontend  
