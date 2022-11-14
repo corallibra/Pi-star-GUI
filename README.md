@@ -43,3 +43,20 @@ display_rotate=1
 更新过程中如遇到掉电可能会出现unable to acquire the dpkg frontend lock提示，可暴力杀死此进程。  
 sudo rm /var/cache/apt/archives/lock-frontend  
 sudo rm /var/lib/dpkg/lock-frontend  
+
+-----------------------------------------------------------------------------------------
+如果遇到触控屏幕X轴相反的解决方案。  
+1. sudo apt-get install xserver-xorg-input-evdev  
+2. create a directory /etc/X11//xorg.conf.d  
+3. create a file with named /etc/X11//xorg.conf.d/99-calibration.conf  
+4. With following entry:  
+
+Section "InputClass"  
+        Identifier      "calibration"  
+        Driver "evdev"  
+        MatchProduct    "FT5406 memory based driver"  
+        Option "InvertX" "1"  
+        Option "InvertY" "1"  
+EndSection
+
+5. Reboot  
