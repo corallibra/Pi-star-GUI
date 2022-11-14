@@ -7,8 +7,10 @@
 sudo mount -o remount,rw /
 sudo mount -o remount,rw /boot
 
-# Update the apt sources
+# Update the apt sources & apt-get
 sudo apt-get update
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt-get -f install
 
 # Patch Debian 9
 if [[ $(cut -c 1 /etc/debian_version) -eq 9 ]]; then
