@@ -30,14 +30,15 @@ allow 127.0.0.1;
 如果屏幕需要旋轉，可以編輯config.txt，在文末添加一句  
 sudo nano /boot/config.txt  
 
-#Default Orientation  
+# Default Orientation  
 display_rotate=0  
-*Rotate 90° Clockwise  
+# Rotate 90° Clockwise  
 display_rotate=3  
-*Rotate 180°  
+# Rotate 180°  
 display_rotate=2  
-*Rotate 270° Clockwise  
-display_rotate=1  
+# Rotate 270° Clockwise  
+display_rotate=1
+
 ----------------------------------------------------------------------------------------  
 更新过程中如遇到掉电可能会出现unable to acquire the dpkg frontend lock提示，可暴力杀死此进程。  
 sudo rm /var/cache/apt/archives/lock-frontend  
