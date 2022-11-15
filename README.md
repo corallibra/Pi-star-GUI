@@ -45,7 +45,7 @@ sudo rm /var/cache/apt/archives/lock-frontend
 sudo rm /var/lib/dpkg/lock-frontend  
 
 -----------------------------------------------------------------------------------------
-如果遇到触控屏幕X轴相反的解决方案。  
+如果遇到触控屏幕失灵的解决方案。  
 1.sudo apt-get install xserver-xorg-input-evdev  
 2.create a directory /etc/X11//xorg.conf.d  
 3.create a file with named /etc/X11//xorg.conf.d/99-calibration.conf  
